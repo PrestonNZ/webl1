@@ -1,0 +1,38 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: white;
+}
+
+.a { 
+width: 90%;
+margin: 0px auto;
+    background-color: red;
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 5%;
+}
+
+
+.item {
+    background: purple;
+    color: red;
+    padding: 10px;
+    
+}
+.item:nth-child(even) {
+    background: seagreen;
+}
+
+img {
+    width: 100%;
+    align-items: flex-end
+
+
+
+}
