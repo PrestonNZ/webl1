@@ -1,21 +1,16 @@
 
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
 
 body {
     background: white;
 }
 
-.a { 
-width: 90%;
-margin: 0px auto;
-    background-color: red;
-display: grid;
-grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 5%;
+.a {
+    width: 90%;
+    margin: 0px auto;
+    background-color: white;
+    display: grid;
+    grid-template-columns:  1fr;
+    grid-gap: 2%;
 }
 
 
@@ -23,16 +18,78 @@ grid-template-columns: 1fr 1fr 1fr;
     background: purple;
     color: red;
     padding: 10px;
-    
+
 }
-.item:nth-child(even) {
-    background: seagreen;
+
+.item {
+    background: black;
 }
 
 img {
     width: 100%;
     align-items: flex-end
+}
 
-
+.logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 15%;
 
 }
+
+.Line {
+    border-bottom: 40px;
+    border-bottom-color: blueviolets;
+}
+
+nav a {
+    font-size: 61px;
+    text-decoration: none;
+    color: black
+}
+
+header {
+    display: grid;
+    grid-template: none;
+    grid-auto-columns: 1fr 1fr 3fr;
+    text-shadow: 5px 5px 5px #000000;
+    color: black;
+    place-items: top;
+    text-decoration: space;
+    text-indent: 50px;
+}
+
+.gridcontent {
+    display: grid;
+    grid-template-columns: 1fr 1fr 3fr 1fr
+}
+
+.offer {
+    width: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 4px solid #000;
+}
+
+.products {
+    display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 10px 10px;
+  grid-template-areas:
+    ". . ."
+    ". . ."
+    ". . .";
+    
+}
+.item {
+    width: 50%
+}
+
+
+
+
+
+
