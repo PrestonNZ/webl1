@@ -1,7 +1,10 @@
-
+@font-face {
+    font-family: hey;
+    src: url(Fonts/hey.ttf);
+}
 
 body {
-    background: white;
+    background: black;
 }
 
 .a {
@@ -9,23 +12,12 @@ body {
     margin: 0px auto;
     background-color: white;
     display: grid;
-    grid-template-columns:  1fr;
+    grid-template-columns: 1fr;
     grid-gap: 2%;
 }
 
 
-.item {
-    background: purple;
-    color: red;
-    padding: 10px;
-
-}
-
-.item {
-    background: black;
-}
-
-img {
+. img {
     width: 100%;
     align-items: flex-end
 }
@@ -46,15 +38,42 @@ img {
 nav a {
     font-size: 61px;
     text-decoration: none;
-    color: black
+    color: white;
+    margin: 1%;
+    font-family: hey;
+
+    opacity: 1;
+    animation: fade 2s linear;
 }
+
+
+@keyframes fade {
+
+    0%,
+    100% {
+        opacity: 0
+    }
+
+    50% {
+        opacity: 1
+    }
+}
+
+
+nav a:hover {
+    color: red;
+    text-decoration: underline
+}
+
+
+
 
 header {
     display: grid;
     grid-template: none;
     grid-auto-columns: 1fr 1fr 3fr;
     text-shadow: 5px 5px 5px #000000;
-    color: black;
+    color: white;
     place-items: top;
     text-decoration: space;
     text-indent: 50px;
@@ -70,26 +89,76 @@ header {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    border: 4px solid #000;
+    border: 7px solid white;
+
 }
 
 .products {
     display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-gap: 10px 10px;
-  grid-template-areas:
-    ". . ."
-    ". . ."
-    ". . .";
-    
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 20px;
+    list-style: none;
+    color: red;
+    padding: 10px;
+    background: black;
+    margin: 5%;
+    font-size: 100%
 }
+
+.products li {
+    border: 7px solid white;
+    background: black;
+}
+
+.products li p {
+    margin: 5%;
+}
+
+.products li img {
+    width: 100%;
+    background: black;
+}
+
+.shoes .shoes {
+    width: 90%;
+}
+
 .item {
-    width: 50%
+    width: 10% background: purple;
+    color: red;
+    padding: 10px;
+    background: black;
+
 }
 
 
+.a:hover .middle {
+    color: red;
+    opacity: 1;
+}
 
+.p {
+    margin: 5%;
+    font-size: 1.2%
+}
 
-
-
+.container{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-gap: 8px 0px;
+  grid-template-areas:
+    "."
+    "."
+    "."
+    ".";
+}
+  
+    
+    
+    
+    
+    
+    
+    
