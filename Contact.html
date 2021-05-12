@@ -1,40 +1,57 @@
 <!doctype html>
 
 <head>
-    <title>Home</title>
+    <title>Contact</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <header>
-
+        <div id="progressbar"></div>
+        <div id="scrollPath"></div>
         <img class="logo" src="images/Useless/pfp%20png.png">
         <nav>
             <a href="index.html">Home</a>
             <a href="Store.html">Store</a>
             <a href="Contact.html">Contact</a>
+            <a href="Shopping.cart.html"></a>
         </nav>
-        
-        
-        
-        <div class="container">
-  <form action="action_page.php">
-<br> 
-    <label for="fname">First Name</label>
-   <br> <input type="text" id="fname" name="firstname" placeholder="Your name..">
-   <br> <label for="lname">Last Name</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-<br>
-    <label for="country">Country</label>
-    <select id="country" name="country">
-   <br>   <option value="australia">Australia</option>
-         <option value="canada">Canada</option>
-      <option value="usa">USA</option>
-     <option value="NewZealand">NewZealand</option>
-    </select>
+             <div class="social">
+            <a href="https://youtu.be/d1YBv2mWll0">
+                <img class="FB" src="Images/Useless/1365px-Facebook_f_logo_(2019).svg.png">
+            </a>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+                <img class="TW" src="Images/Useless/download.png">
+            </a>
+        </div>
+    </header>
+    <div class="glowing"></div>
+    <h3>Contact Form</h3>
 
+    <div class="container">
+        <form action="/action_page.php">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
 
-    <br> <input type="submit" value="Submit">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
 
-  </form>
-</div>
+            <label for="Email">Email</label>
+            <input type="text" id="Email" name="Email" placeholder="Email..">
+
+            <label for="country">Country</label>
+            <select id="country" name="country">
+                <option value="australia">Australia</option>
+                <option value="canada">Canada</option>
+                <option value="usa">USA</option>
+                <option value="usa">NewZealand</option>
+
+            </select>
+
+            <label for="subject">Subject</label>
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d22014.340275688835!2d168.33426325!3d-46.393339749999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2snz!4v1620031815291!5m2!1sen!2snz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <input type="submit" value="Submit">
+        </form>
+    </div>

@@ -1,10 +1,30 @@
 @font-face {
     font-family: hey;
     src: url(Fonts/hey.ttf);
+
 }
+
+@font-face {
+    font-family: kgr;
+    src: url(Fonts/kgr.ttf);
+
+}
+
+@font-face {
+    font-family: solo;
+    src: url(Fonts/solo.ttf);
+
+}
+
+
+
 
 body {
     background: black;
+    border: white;
+    display: grid; 
+    grid-template-columns: 1fr;
+    grid-gap: 20px 0px;
 }
 
 .a {
@@ -23,11 +43,10 @@ body {
 }
 
 .logo {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 15%;
-
+    grid-column: 2/3;
+    width: 45%;
+    margin: auto;
+    margin-top: 40px
 }
 
 .Line {
@@ -46,7 +65,6 @@ nav a {
     animation: fade 2s linear;
 }
 
-
 @keyframes fade {
 
     0%,
@@ -59,19 +77,70 @@ nav a {
     }
 }
 
-
-nav a:hover {
-    color: red;
-    text-decoration: underline
+nav {
+    grid-column: 1/3;
+    grid-row: 2/3;
 }
 
+nav a:hover {
+    text-decoration: underline;
+    color: red;
 
+}
 
+.social {
+    grid-row: 2/3;
+    display: flex;
+    align-items: flex-end
+}
+
+.social img {
+    width: 60px;
+    margin-left: 24px;
+    margin-bottom: 7px;
+    align-items: center;
+    opacity: 1;
+
+}
+
+.glowing {
+    width: 96%;
+    margin: auto;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    height: 100%;
+    border: 5px solid transparent;
+    border-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+    border-image-slice: 1;
+    animation: animate 5s linear infinite;
+}
+
+.glowing2 {
+    width: 70%;
+    height: 99%;
+    margin: auto;
+/*
+    margin-bottom: 10px;
+    margin-top: 5vh;
+*/
+    grid-column: 1/2;
+    grid-row: 2/3;
+    border: 5px solid transparent;
+    border-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+    border-image-slice: 1;
+    animation: animate 5s linear infinite;
+    border-style: inset;
+    place-self: center;
+}
 
 header {
+    z-index: 1;
+    width: 96%;
+    margin: auto;
+    grid-column: 1/2;
+    grid-row: 1/2;
     display: grid;
-    grid-template: none;
-    grid-auto-columns: 1fr 1fr 3fr;
+    grid-template-columns: 1fr 1fr 1fr;
     text-shadow: 5px 5px 5px #000000;
     color: white;
     place-items: top;
@@ -87,9 +156,18 @@ header {
 .offer {
     width: 70%;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    border: 7px solid white;
+    margin: auto;
+    place-self: center;
+/*
+    border: 5px solid transparent;
+    border-image: linear-gradient(to top, #008aff, #00ffe7);
+*/
+/*    border-image-slice: 1;*/
+/*    margin-bottom: 10px;*/
+/*    margin-top: 5vh;*/
+/*    animation: animate 5s linear infinite;*/
+    grid-row: 2/3;
+    grid-column: 1/2;
 
 }
 
@@ -103,12 +181,19 @@ header {
     padding: 10px;
     background: black;
     margin: 5%;
-    font-size: 100%
+    font-size: 100%;
+    font-family: kgr;
+
+
 }
 
 .products li {
     border: 7px solid white;
     background: black;
+    border: 5px solid transparent;
+    border-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+    border-image-slice: 1;
+    animation: animate 5s linear infinite;
 }
 
 .products li p {
@@ -143,22 +228,141 @@ header {
     font-size: 1.2%
 }
 
-.container{
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  grid-gap: 8px 0px;
-  grid-template-areas:
-    "."
-    "."
-    "."
-    ".";
+/*
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-gap: 8px 0px;
+    grid-template-areas:
+        "."
+        "."
+        "."
+        ".";
 }
-  
+*/
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1f 2fr;
+    place-items: center;
+    grid-gap: 10px;
+    width: 50%;
+    margin: 20px auto;
+}
+
+iframe {
+    display: block;
+    margin: 10px auto;
+
+}
+
+.button {
+    grid-column: 1/3;
+}
+
+input[type=text],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+.container {
+    border-radius: 5px;
+    background-color:
+        padding: 20px;
+}
+
+
+.social img:hover {
+    color: red;
+    opacity: 1;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+#progressbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 100%;
+    background: rgba(255, 225, 255, 0.05);
+}
+
+#scrollPath {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 100%;
+    background: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+
+    animation: animate 5s linear infinite;
+}
+
+@keyframes animate {
+
+    0%,
+    100% {
+        filter: hue-rotate(0deg);
+    }
+
+    50% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+#progressbar:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+    filter: blur(10px);
+
+}
+
+#progressbar:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(violet, indigo, blue, green, yellow, orange, red);
+    filter: blur(30px);
+}
+
+h1{
+    color: red;
+    font-size: 45px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: solo;
+    text-decoration: none;
+    -webkit-text-stroke: 2px white;
     
-    
-    
-    
-    
-    
-    
+}
